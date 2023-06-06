@@ -24,7 +24,7 @@
         gap: 20px;
         justify-items: center;
         align-items: center;
-        height: calc(100vh - 100px); /* Adjust height based on your needs */
+        height: calc(100vh - 100px);
         padding: 20px;
       }
 
@@ -40,39 +40,54 @@
   <body>
     <header>
       <h1>Logos Timis</h1>
+      <img src=""
     </header>
 
     <div class="video-container">
-      <video controls autoplay>
+      <video controls>
         <source src="video1.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video2.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video3.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video4.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video5.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video6.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video7.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video8.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video9.mp4" type="video/mp4" />
       </video>
-      <video controls autoplay>
+      <video controls>
         <source src="video10.mp4" type="video/mp4" />
       </video>
     </div>
+
+    <script>
+      var videos = document.querySelectorAll("video");
+
+      videos.forEach(function (video) {
+        video.addEventListener("click", function () {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
